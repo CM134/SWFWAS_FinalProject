@@ -15,7 +15,7 @@ def callback(msg):
  
 def goal_pose(pose):  
     goal_pose = MoveBaseGoal()
-    goal_pose.target_pose.header.frame_id = 'odom'
+    goal_pose.target_pose.header.frame_id = 'map'
     goal_pose.target_pose.pose.position.x = pose[0][0]
     goal_pose.target_pose.pose.position.y = pose[0][1]
     goal_pose.target_pose.pose.position.z = pose[0][2]
@@ -27,7 +27,7 @@ def goal_pose(pose):
     return goal_pose
  
  
-waypoints =  [(-5.5, -2.8, 0.0), (0.0, 0.0, -0.16547, -0.986213798314)]
+waypoints =  [(-0.42, -2.8, 0.0), (0.0, 0.0, -0.16547, -0.986213798314)]
 
 
 
